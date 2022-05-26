@@ -1,8 +1,6 @@
-package com.joonseolee.querydslexample.service;
+package com.joonseolee.querydslexample.domain.student;
 
-import com.joonseolee.querydslexample.entity.School;
-import com.joonseolee.querydslexample.entity.Student;
-import com.joonseolee.querydslexample.repository.StudentRepository;
+import com.joonseolee.querydslexample.domain.school.School;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

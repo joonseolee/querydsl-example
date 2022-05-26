@@ -1,7 +1,7 @@
 package com.joonseolee.querydslexample.controller;
 
-import com.joonseolee.querydslexample.entity.Student;
-import com.joonseolee.querydslexample.service.StudentService;
+import com.joonseolee.querydslexample.domain.student.Student;
+import com.joonseolee.querydslexample.domain.student.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

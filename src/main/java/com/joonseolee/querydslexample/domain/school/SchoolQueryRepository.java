@@ -1,6 +1,6 @@
-package com.joonseolee.querydslexample.repository;
+package com.joonseolee.querydslexample.domain.school;
 
-import com.joonseolee.querydslexample.entity.School;
+import com.joonseolee.querydslexample.domain.school.School;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,9 +1,9 @@
 package com.joonseolee.querydslexample.config;
 
-import com.joonseolee.querydslexample.entity.School;
-import com.joonseolee.querydslexample.entity.Student;
-import com.joonseolee.querydslexample.service.SchoolService;
-import com.joonseolee.querydslexample.service.StudentService;
+import com.joonseolee.querydslexample.domain.school.School;
+import com.joonseolee.querydslexample.domain.student.Student;
+import com.joonseolee.querydslexample.domain.school.SchoolService;
+import com.joonseolee.querydslexample.domain.student.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

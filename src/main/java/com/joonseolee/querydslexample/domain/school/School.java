@@ -1,6 +1,7 @@
-package com.joonseolee.querydslexample.entity;
+package com.joonseolee.querydslexample.domain.school;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.joonseolee.querydslexample.domain.student.Student;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;

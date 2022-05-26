@@ -1,6 +1,5 @@
-package com.joonseolee.querydslexample.repository;
+package com.joonseolee.querydslexample.domain.school;
 
-import com.joonseolee.querydslexample.entity.School;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SchoolRepository extends JpaRepository<School, Long>, SchoolQueryRepository {

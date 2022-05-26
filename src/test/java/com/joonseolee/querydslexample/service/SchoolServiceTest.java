@@ -1,5 +1,7 @@
 package com.joonseolee.querydslexample.service;
 
+import com.joonseolee.querydslexample.domain.school.SchoolService;
+import com.joonseolee.querydslexample.domain.student.StudentService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

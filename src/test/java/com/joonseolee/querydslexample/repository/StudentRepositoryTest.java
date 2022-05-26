@@ -1,6 +1,8 @@
 package com.joonseolee.querydslexample.repository;
 
 import com.joonseolee.querydslexample.config.DatasourceConfig;
+import com.joonseolee.querydslexample.domain.school.SchoolRepository;
+import com.joonseolee.querydslexample.domain.student.StudentRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -31,6 +33,6 @@ class StudentRepositoryTest {
         var school3 = schools.get(2);
         System.out.println("value >>> " + school1.getName());
         System.out.println("value >>> " + school2.getName());
-        assertThat(students.size(), is(6));
+        assertThat(students.size(), is(7));
     }
 }

@@ -1,6 +1,5 @@
-package com.joonseolee.querydslexample.repository;
+package com.joonseolee.querydslexample.domain.student;
 
-import com.joonseolee.querydslexample.entity.Student;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;

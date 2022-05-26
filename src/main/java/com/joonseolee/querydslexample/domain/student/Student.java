@@ -1,6 +1,7 @@
-package com.joonseolee.querydslexample.entity;
+package com.joonseolee.querydslexample.domain.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.joonseolee.querydslexample.domain.school.School;
 import lombok.Getter;
 import lombok.Setter;
 
