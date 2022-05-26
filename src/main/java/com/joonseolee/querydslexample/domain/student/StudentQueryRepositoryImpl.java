@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import static com.joonseolee.querydslexample.entity.QStudent.student;
+import static com.joonseolee.querydslexample.domain.student.QStudent.student;
+
 
 @RequiredArgsConstructor
 @Repository
