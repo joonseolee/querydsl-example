@@ -2,10 +2,19 @@ package com.joonseolee.querydslexample.domain.school.dto;
 
 import com.querydsl.core.annotations.QueryProjection;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
-public class SchoolNameAddress {
+public final class SchoolNameAddress {
 
     private SchoolNameAddress() {}
+
+    @Getter
+    @RequiredArgsConstructor
+    public static class Request {
+        private final Long id;
+        private final String name;
+        private final String address;
+    }
 
     @Getter
     public static class Response {

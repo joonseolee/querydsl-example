@@ -3,12 +3,8 @@ package com.joonseolee.querydslexample.domain.school;
 import com.joonseolee.querydslexample.domain.school.dto.QSchoolNameAddress_Response;
 import com.joonseolee.querydslexample.domain.school.dto.SchoolNameAddress;
 import com.querydsl.core.BooleanBuilder;
-import com.querydsl.core.annotations.QueryProjection;
-import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.criterion.Projection;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

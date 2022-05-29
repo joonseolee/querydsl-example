@@ -1,5 +1,6 @@
 package com.joonseolee.querydslexample.domain.school;
 
+import com.joonseolee.querydslexample.domain.school.dto.SchoolNameAddress;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,10 @@ public class SchoolService {
 
     public List<School> findSomething(LocalDate localDate) {
         return schoolRepository.findByCertainDate(localDate);
+    }
+
+    public List<School> findByConditions(SchoolNameAddress.Request request) {
+        return schoolRepository.findAll(SchoolSpecRepositoryImpl.findByConditions(request));
     }
 
     public void insertSchool(School school) {
