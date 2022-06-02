@@ -7,6 +7,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -18,6 +19,7 @@ import static com.joonseolee.querydslexample.domain.school.QSchool.school;
 public class SchoolQueryRepositoryImpl implements SchoolQueryRepository {
 
     private final JPAQueryFactory jpaQueryFactory;
+    private final EntityManager entityManager;
 
     @Override
     public List<School> findByCertainDate(LocalDate localDate) {
@@ -35,5 +37,11 @@ public class SchoolQueryRepositoryImpl implements SchoolQueryRepository {
                 .from(school)
                 .where(school.id.eq(id))
                 .fetchFirst();
+    }
+
+    @Override
+    public void multipleUpdate(String newAddress) {
+        jpaQueryFactory.update(school).set(school.address, newAddress).execute();
+        entityManager.clear();
     }
 }

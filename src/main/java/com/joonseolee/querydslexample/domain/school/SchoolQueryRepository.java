@@ -1,6 +1,5 @@
 package com.joonseolee.querydslexample.domain.school;
 
-import com.joonseolee.querydslexample.domain.school.School;
 import com.joonseolee.querydslexample.domain.school.dto.SchoolNameAddress;
 
 import java.time.LocalDate;
@@ -16,4 +15,6 @@ public interface SchoolQueryRepository {
      * @return
      */
     SchoolNameAddress.Response findNameAddressByIdUsingProjections(long id);
+
+    void multipleUpdate(String newAddress);
 }

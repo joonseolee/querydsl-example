@@ -25,4 +25,14 @@ class SchoolRepositoryTest {
         assertEquals("aq", object.getName());
         assertEquals("a2", object.getAddress());
     }
+
+    @Test
+    void whenUpdateMultipleSchoolAddress_thenSuccess() {
+        var originSchools = schoolRepository.findAll();
+        schoolRepository.multipleUpdate("eeeee");
+        var changedSchools = schoolRepository.findAll();
+
+        assertNotEquals("eeeee", originSchools.get(0).getAddress());
+        assertEquals("eeeee", changedSchools.get(0).getAddress());
+    }
 }

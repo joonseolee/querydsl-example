@@ -30,6 +30,10 @@ public class SchoolService {
         schoolRepository.save(school);
     }
 
+    public void updateSchool(String newAddress) {
+        schoolRepository.multipleUpdate(newAddress);
+    }
+
     public List<School> findAll() {
         return schoolRepository.findAll();
     }
