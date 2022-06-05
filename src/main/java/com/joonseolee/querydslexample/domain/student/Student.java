@@ -1,6 +1,7 @@
 package com.joonseolee.querydslexample.domain.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.joonseolee.querydslexample.domain.locker.Locker;
 import com.joonseolee.querydslexample.domain.school.School;
 import com.joonseolee.querydslexample.domain.type.SexType;
 import lombok.Getter;
@@ -44,6 +45,10 @@ public class Student {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "school_id")
     private School school;
+
+    @OneToOne
+    @JoinColumn
+    private Locker locker;
 
     public Student() {}
     public Student(String name, int age, School school) {
