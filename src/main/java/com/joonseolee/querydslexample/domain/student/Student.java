@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -58,5 +59,20 @@ public class Student {
         this.score = score;
         this.createdDateTime = new Date();
         this.school = school;
+    }
+
+    /**
+     * bidirectional connection
+     * @param school
+     */
+    public void setSchool(School school) {
+        if (!Objects.isNull(this.school)) {
+            this.school.getStudents().remove(this);
+        }
+        this.school = school;
+
+        if (!this.school.getStudents().contains(this)) {
+            this.school.addStudent(this);
+        }
     }
 }

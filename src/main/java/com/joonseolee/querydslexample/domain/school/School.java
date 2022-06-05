@@ -39,4 +39,11 @@ public class School {
         this.name = name;
         this.address = address;
     }
+
+    public void addStudent(Student student) {
+        this.students.add(student);
+        if (student.getSchool() != this) {
+            student.setSchool(this);
+        }
+    }
 }

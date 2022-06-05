@@ -2,11 +2,10 @@ package com.joonseolee.querydslexample.controller;
 
 import com.joonseolee.querydslexample.domain.student.Student;
 import com.joonseolee.querydslexample.domain.student.StudentService;
+import com.joonseolee.querydslexample.domain.student.dto.SavedStudent;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +21,11 @@ public class StudentController {
         if (name == null)
             return studentService.findAll();
         return studentService.findByName(name);
+    }
+
+    @PostMapping
+    public ResponseEntity<?> saveStudent(@RequestBody SavedStudent.Request request) {
+        studentService.insertStudent(request);
+        return ResponseEntity.ok().build();
     }
 }
