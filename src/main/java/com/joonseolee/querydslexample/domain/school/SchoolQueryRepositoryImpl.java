@@ -41,6 +41,7 @@ public class SchoolQueryRepositoryImpl implements SchoolQueryRepository {
 
     @Override
     public void multipleUpdate(String newAddress) {
+        entityManager.createQuery("select s from School as s", School.class);
         jpaQueryFactory.update(school).set(school.address, newAddress).execute();
         entityManager.clear();
     }
