@@ -35,4 +35,10 @@ class StudentRepositoryTest {
         System.out.println("value >>> " + school2.getName());
         assertThat(students.size(), is(7));
     }
+
+
+    @Test
+    void whenSelectByIdClass_thenPrintStudent() {
+        studentRepository.doSomething();
+    }
 }

@@ -6,11 +6,13 @@ import com.joonseolee.querydslexample.domain.school.School;
 import com.joonseolee.querydslexample.domain.type.SexType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
+@ToString
 @Getter
 @Setter
 @Entity
@@ -18,6 +20,7 @@ import java.util.Objects;
         name = "NAME",
         columnNames = {"name"}
 )})
+@IdClass(StudentId.class)
 public class Student {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
