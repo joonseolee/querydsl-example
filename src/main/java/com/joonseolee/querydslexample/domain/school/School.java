@@ -1,6 +1,7 @@
 package com.joonseolee.querydslexample.domain.school;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.joonseolee.querydslexample.domain.BaseEntity;
 import com.joonseolee.querydslexample.domain.student.Student;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,10 +17,7 @@ import java.util.List;
 @Entity
 @Table
 @EntityListeners(AuditingEntityListener.class)
-public class School {
-
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class School extends BaseEntity {
 
     @Column(name = "name")
     private String name;
