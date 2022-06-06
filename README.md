@@ -30,6 +30,11 @@ JPA + QueryDSL 사용하면서 애로사항이나 특별히 쓸만한 기능들�
 
 양방향이 좋긴한데 설정해야할부분이 좀 있고 복잡하기때문에 객체 그래프 탐색 기능이 필요할떄만 추가하자.
 
+## entityManager
+
+`EntityManager.find`, `EntityManager.getReference` 의 차이는  
+즉시 조회가 되는지 지연 조회가 되는지 차이이다.
+
 ---
 
 ### 참고
