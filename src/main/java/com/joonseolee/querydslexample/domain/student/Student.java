@@ -20,7 +20,6 @@ import java.util.Objects;
         name = "NAME",
         columnNames = {"name"}
 )})
-@IdClass(StudentId.class)
 public class Student {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
