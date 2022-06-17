@@ -35,7 +35,30 @@ JPA + QueryDSL 사용하면서 애로사항이나 특별히 쓸만한 기능들�
 `EntityManager.find`, `EntityManager.getReference` 의 차이는  
 즉시 조회가 되는지 지연 조회가 되는지 차이이다.
 
----
+## 값 타입
+
+책에서는 `Embedded` 를 통해 생산성을 늘렸는데 다른 엔티티에 복사할때  
+주소값이 공유될수있기때문에 요 부분은 주의가 필요하다고함.
+
+## 집합함수
+
+count 값만 데이터가 없을때 0 으로 나오고 나머지는 null 로 나온다.
+
+| 값       |
+| :------- |
+| count    |
+| min, max |
+| avg      |
+| sum      |
+
+## 서브쿼리
+
+| 값       |
+| :------- |
+| count    |
+| min, max |
+| avg      |
+| sum      |
 
 ### 참고
 

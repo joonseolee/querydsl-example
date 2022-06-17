@@ -41,4 +41,14 @@ class StudentRepositoryTest {
     void whenSelectByIdClass_thenPrintStudent() {
         studentRepository.doSomething();
     }
+
+    @Test
+    void whenSelectByNoFetch_thenPrintAgeAndGrade() {
+        var maps = studentRepository.findByNoFetch();
+    }
+
+    @Test
+    void whenSelectByFetch_thenPrintAgeAndGrade() {
+        var maps = studentRepository.findByFetch();
+    }
 }

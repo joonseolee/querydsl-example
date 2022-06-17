@@ -33,6 +33,20 @@ public class StudentQueryRepositoryImpl implements StudentQueryRepository {
         log.info("student -> " + student.toString());
     }
 
+    @Override
+    public List<Student> findByNoFetch() {
+        var students = entityManager.createQuery("SELECT s FROM Student s JOIN s.school", Student.class).getResultList();
+        students.forEach(it -> log.info("student id - [{}], name - [{}]", it.getId(), it.getName()));
+        return students;
+    }
+
+    @Override
+    public List<Student> findByFetch() {
+        var students = entityManager.createQuery("SELECT s FROM Student s JOIN FETCH s.school", Student.class).getResultList();
+        students.forEach(it -> log.info("student id - [{}], name - [{}]", it.getId(), it.getName()));
+        return students;
+    }
+
     public List<Student> findByScoreAndGrade(int grade, int score) {
         return null;
     }
